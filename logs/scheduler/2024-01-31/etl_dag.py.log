@@ -8542,3 +8542,596 @@ SyntaxError: invalid syntax
 [2024-01-31 15:43:39,981] {logging_mixin.py:115} INFO - [2024-01-31 15:43:39,981] {dag.py:2371} INFO - Sync 1 DAGs
 [2024-01-31 15:43:40,002] {logging_mixin.py:115} INFO - [2024-01-31 15:43:40,002] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
 [2024-01-31 15:43:40,009] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.096 seconds
+[2024-01-31 15:44:10,231] {processor.py:153} INFO - Started process (PID=10791) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:44:10,232] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:44:10,232] {logging_mixin.py:115} INFO - [2024-01-31 15:44:10,232] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:44:10,242] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:44:10,264] {logging_mixin.py:115} INFO - [2024-01-31 15:44:10,264] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:44:10,280] {logging_mixin.py:115} INFO - [2024-01-31 15:44:10,280] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:44:10,288] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.060 seconds
+[2024-01-31 15:44:35,479] {processor.py:153} INFO - Started process (PID=10801) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:44:35,480] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:44:35,482] {logging_mixin.py:115} INFO - [2024-01-31 15:44:35,482] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:44:35,504] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:44:35,541] {logging_mixin.py:115} INFO - [2024-01-31 15:44:35,541] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:44:35,559] {logging_mixin.py:115} INFO - [2024-01-31 15:44:35,559] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:44:35,570] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.096 seconds
+[2024-01-31 15:45:05,853] {processor.py:153} INFO - Started process (PID=10811) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:45:05,854] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:45:05,854] {logging_mixin.py:115} INFO - [2024-01-31 15:45:05,854] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:45:05,867] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:45:05,890] {logging_mixin.py:115} INFO - [2024-01-31 15:45:05,890] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:45:05,906] {logging_mixin.py:115} INFO - [2024-01-31 15:45:05,906] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:45:05,913] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.065 seconds
+[2024-01-31 15:45:36,156] {processor.py:153} INFO - Started process (PID=10821) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:45:36,157] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:45:36,158] {logging_mixin.py:115} INFO - [2024-01-31 15:45:36,158] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:45:36,168] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:45:36,185] {logging_mixin.py:115} INFO - [2024-01-31 15:45:36,185] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:45:36,199] {logging_mixin.py:115} INFO - [2024-01-31 15:45:36,199] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:45:36,206] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.054 seconds
+[2024-01-31 15:46:06,443] {processor.py:153} INFO - Started process (PID=10831) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:46:06,445] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:46:06,446] {logging_mixin.py:115} INFO - [2024-01-31 15:46:06,446] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:46:06,461] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:46:06,491] {logging_mixin.py:115} INFO - [2024-01-31 15:46:06,491] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:46:06,509] {logging_mixin.py:115} INFO - [2024-01-31 15:46:06,509] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:46:06,516] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.078 seconds
+[2024-01-31 15:46:36,779] {processor.py:153} INFO - Started process (PID=10841) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:46:36,780] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:46:36,781] {logging_mixin.py:115} INFO - [2024-01-31 15:46:36,781] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:46:36,796] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:46:36,823] {logging_mixin.py:115} INFO - [2024-01-31 15:46:36,823] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:46:36,838] {logging_mixin.py:115} INFO - [2024-01-31 15:46:36,838] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:46:36,844] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.071 seconds
+[2024-01-31 15:47:07,036] {processor.py:153} INFO - Started process (PID=10851) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:07,037] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:47:07,038] {logging_mixin.py:115} INFO - [2024-01-31 15:47:07,038] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:07,055] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:07,085] {logging_mixin.py:115} INFO - [2024-01-31 15:47:07,085] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:47:07,101] {logging_mixin.py:115} INFO - [2024-01-31 15:47:07,100] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:47:07,108] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.076 seconds
+[2024-01-31 15:47:37,463] {processor.py:153} INFO - Started process (PID=10861) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:37,465] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:47:37,466] {logging_mixin.py:115} INFO - [2024-01-31 15:47:37,465] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:37,481] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:37,506] {logging_mixin.py:115} INFO - [2024-01-31 15:47:37,506] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:47:37,523] {logging_mixin.py:115} INFO - [2024-01-31 15:47:37,523] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:47:37,530] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.074 seconds
+[2024-01-31 15:47:42,506] {processor.py:153} INFO - Started process (PID=10866) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:42,507] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:47:42,508] {logging_mixin.py:115} INFO - [2024-01-31 15:47:42,508] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:42,521] {logging_mixin.py:115} INFO - [2024-01-31 15:47:42,520] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 313, in <module>
+    aggregate_dim_t
+NameError: name 'aggregate_dim_t' is not defined
+[2024-01-31 15:47:42,522] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:42,540] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.037 seconds
+[2024-01-31 15:47:52,638] {processor.py:153} INFO - Started process (PID=10871) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:52,639] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:47:52,640] {logging_mixin.py:115} INFO - [2024-01-31 15:47:52,640] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:52,653] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:47:52,675] {logging_mixin.py:115} INFO - [2024-01-31 15:47:52,675] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:47:52,691] {logging_mixin.py:115} INFO - [2024-01-31 15:47:52,691] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:47:52,700] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.065 seconds
+[2024-01-31 15:48:22,981] {processor.py:153} INFO - Started process (PID=10881) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:48:22,983] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:48:22,984] {logging_mixin.py:115} INFO - [2024-01-31 15:48:22,984] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:48:23,007] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:48:23,045] {logging_mixin.py:115} INFO - [2024-01-31 15:48:23,045] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:48:23,070] {logging_mixin.py:115} INFO - [2024-01-31 15:48:23,070] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:48:23,077] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.103 seconds
+[2024-01-31 15:48:53,305] {processor.py:153} INFO - Started process (PID=10891) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:48:53,306] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:48:53,306] {logging_mixin.py:115} INFO - [2024-01-31 15:48:53,306] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:48:53,318] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:48:53,344] {logging_mixin.py:115} INFO - [2024-01-31 15:48:53,344] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:48:53,362] {logging_mixin.py:115} INFO - [2024-01-31 15:48:53,362] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:48:53,369] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.068 seconds
+[2024-01-31 15:49:01,403] {processor.py:153} INFO - Started process (PID=10896) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:01,404] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:49:01,405] {logging_mixin.py:115} INFO - [2024-01-31 15:49:01,405] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:01,434] {logging_mixin.py:115} INFO - [2024-01-31 15:49:01,431] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_dim_table',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:49:01,435] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:01,455] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.059 seconds
+[2024-01-31 15:49:04,466] {processor.py:153} INFO - Started process (PID=10901) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:04,469] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:49:04,470] {logging_mixin.py:115} INFO - [2024-01-31 15:49:04,470] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:04,487] {logging_mixin.py:115} INFO - [2024-01-31 15:49:04,485] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_dim_table',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:49:04,488] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:04,512] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.050 seconds
+[2024-01-31 15:49:08,572] {processor.py:153} INFO - Started process (PID=10911) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:08,573] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:49:08,574] {logging_mixin.py:115} INFO - [2024-01-31 15:49:08,573] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:08,587] {logging_mixin.py:115} INFO - [2024-01-31 15:49:08,585] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:49:08,587] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:08,603] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.033 seconds
+[2024-01-31 15:49:10,596] {processor.py:153} INFO - Started process (PID=10916) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:10,597] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:49:10,597] {logging_mixin.py:115} INFO - [2024-01-31 15:49:10,597] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:10,611] {logging_mixin.py:115} INFO - [2024-01-31 15:49:10,610] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:49:10,611] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:10,627] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.034 seconds
+[2024-01-31 15:49:13,671] {processor.py:153} INFO - Started process (PID=10921) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:13,672] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:49:13,673] {logging_mixin.py:115} INFO - [2024-01-31 15:49:13,673] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:13,697] {logging_mixin.py:115} INFO - [2024-01-31 15:49:13,694] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:49:13,697] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:13,713] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.048 seconds
+[2024-01-31 15:49:17,695] {processor.py:153} INFO - Started process (PID=10926) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:17,696] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:49:17,696] {logging_mixin.py:115} INFO - [2024-01-31 15:49:17,696] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:17,709] {logging_mixin.py:115} INFO - [2024-01-31 15:49:17,708] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:49:17,709] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:17,724] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.033 seconds
+[2024-01-31 15:49:19,718] {processor.py:153} INFO - Started process (PID=10931) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:19,719] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:49:19,720] {logging_mixin.py:115} INFO - [2024-01-31 15:49:19,720] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:19,733] {logging_mixin.py:115} INFO - [2024-01-31 15:49:19,732] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:49:19,733] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:19,750] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.035 seconds
+[2024-01-31 15:49:49,013] {processor.py:153} INFO - Started process (PID=10941) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:49,014] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:49:49,015] {logging_mixin.py:115} INFO - [2024-01-31 15:49:49,015] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:49,036] {logging_mixin.py:115} INFO - [2024-01-31 15:49:49,034] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:49:49,037] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:49,062] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.052 seconds
+[2024-01-31 15:49:50,063] {processor.py:153} INFO - Started process (PID=10946) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:50,065] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:49:50,066] {logging_mixin.py:115} INFO - [2024-01-31 15:49:50,066] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:50,082] {logging_mixin.py:115} INFO - [2024-01-31 15:49:50,081] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:49:50,082] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:50,098] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.039 seconds
+[2024-01-31 15:49:54,129] {processor.py:153} INFO - Started process (PID=10951) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:54,130] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:49:54,130] {logging_mixin.py:115} INFO - [2024-01-31 15:49:54,130] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:54,145] {logging_mixin.py:115} INFO - [2024-01-31 15:49:54,144] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:49:54,145] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:54,161] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.035 seconds
+[2024-01-31 15:49:57,176] {processor.py:153} INFO - Started process (PID=10956) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:57,178] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:49:57,179] {logging_mixin.py:115} INFO - [2024-01-31 15:49:57,179] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:57,199] {logging_mixin.py:115} INFO - [2024-01-31 15:49:57,197] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:49:57,199] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:49:57,219] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.047 seconds
+[2024-01-31 15:50:27,445] {processor.py:153} INFO - Started process (PID=10966) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:50:27,447] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:50:27,448] {logging_mixin.py:115} INFO - [2024-01-31 15:50:27,447] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:50:27,464] {logging_mixin.py:115} INFO - [2024-01-31 15:50:27,463] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:50:27,465] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:50:27,488] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.048 seconds
+[2024-01-31 15:50:28,474] {processor.py:153} INFO - Started process (PID=10971) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:50:28,475] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:50:28,476] {logging_mixin.py:115} INFO - [2024-01-31 15:50:28,476] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:50:28,496] {logging_mixin.py:115} INFO - [2024-01-31 15:50:28,494] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily',
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:50:28,496] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:50:28,513] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.044 seconds
+[2024-01-31 15:50:50,768] {processor.py:153} INFO - Started process (PID=10981) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:50:50,769] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:50:50,770] {logging_mixin.py:115} INFO - [2024-01-31 15:50:50,770] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:50:50,798] {logging_mixin.py:115} INFO - [2024-01-31 15:50:50,797] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily'
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:50:50,799] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:50:50,821] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.059 seconds
+[2024-01-31 15:51:21,036] {processor.py:153} INFO - Started process (PID=10991) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:51:21,037] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:51:21,037] {logging_mixin.py:115} INFO - [2024-01-31 15:51:21,037] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:51:21,050] {logging_mixin.py:115} INFO - [2024-01-31 15:51:21,049] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily'
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:51:21,050] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:51:21,069] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.039 seconds
+[2024-01-31 15:51:51,364] {processor.py:153} INFO - Started process (PID=11001) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:51:51,365] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:51:51,365] {logging_mixin.py:115} INFO - [2024-01-31 15:51:51,365] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:51:51,377] {logging_mixin.py:115} INFO - [2024-01-31 15:51:51,375] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily'
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:51:51,377] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:51:51,394] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.034 seconds
+[2024-01-31 15:52:21,627] {processor.py:153} INFO - Started process (PID=11011) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:52:21,629] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:52:21,630] {logging_mixin.py:115} INFO - [2024-01-31 15:52:21,630] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:52:21,651] {logging_mixin.py:115} INFO - [2024-01-31 15:52:21,648] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily'
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:52:21,651] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:52:21,678] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.059 seconds
+[2024-01-31 15:52:51,950] {processor.py:153} INFO - Started process (PID=11021) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:52:51,952] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:52:51,952] {logging_mixin.py:115} INFO - [2024-01-31 15:52:51,952] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:52:51,969] {logging_mixin.py:115} INFO - [2024-01-31 15:52:51,967] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily'
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:52:51,969] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:52:51,995] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.052 seconds
+[2024-01-31 15:52:59,031] {processor.py:153} INFO - Started process (PID=11026) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:52:59,032] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:52:59,032] {logging_mixin.py:115} INFO - [2024-01-31 15:52:59,032] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:52:59,037] {logging_mixin.py:115} INFO - [2024-01-31 15:52:59,036] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 337
+    ,aggregate_province_monthly \
+    ^
+SyntaxError: invalid syntax
+[2024-01-31 15:52:59,038] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:52:59,052] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.024 seconds
+[2024-01-31 15:53:14,192] {processor.py:153} INFO - Started process (PID=11036) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:53:14,192] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:53:14,193] {logging_mixin.py:115} INFO - [2024-01-31 15:53:14,193] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:53:14,213] {logging_mixin.py:115} INFO - [2024-01-31 15:53:14,211] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily'
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:53:14,213] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:53:14,234] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.048 seconds
+[2024-01-31 15:53:37,409] {processor.py:153} INFO - Started process (PID=11041) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:53:37,410] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:53:37,411] {logging_mixin.py:115} INFO - [2024-01-31 15:53:37,411] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:53:37,432] {logging_mixin.py:115} INFO - [2024-01-31 15:53:37,430] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily'
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:53:37,432] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:53:37,450] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.049 seconds
+[2024-01-31 15:53:49,575] {processor.py:153} INFO - Started process (PID=11051) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:53:49,576] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:53:49,576] {logging_mixin.py:115} INFO - [2024-01-31 15:53:49,576] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:53:49,593] {logging_mixin.py:115} INFO - [2024-01-31 15:53:49,590] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily'
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:53:49,594] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:53:49,620] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.048 seconds
+[2024-01-31 15:54:19,874] {processor.py:153} INFO - Started process (PID=11061) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:54:19,875] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:54:19,876] {logging_mixin.py:115} INFO - [2024-01-31 15:54:19,876] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:54:19,892] {logging_mixin.py:115} INFO - [2024-01-31 15:54:19,890] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 308, in <module>
+    task_id='aggregate_province_daily'
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 373, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2024-01-31 15:54:19,892] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:54:19,912] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.043 seconds
+[2024-01-31 15:54:25,974] {processor.py:153} INFO - Started process (PID=11066) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:54:25,975] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:54:25,976] {logging_mixin.py:115} INFO - [2024-01-31 15:54:25,976] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:54:26,002] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:54:26,055] {logging_mixin.py:115} INFO - [2024-01-31 15:54:26,055] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:54:26,070] {logging_mixin.py:115} INFO - [2024-01-31 15:54:26,070] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:54:26,081] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.112 seconds
+[2024-01-31 15:54:56,315] {processor.py:153} INFO - Started process (PID=11076) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:54:56,316] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:54:56,316] {logging_mixin.py:115} INFO - [2024-01-31 15:54:56,316] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:54:56,329] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:54:56,352] {logging_mixin.py:115} INFO - [2024-01-31 15:54:56,352] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:54:56,369] {logging_mixin.py:115} INFO - [2024-01-31 15:54:56,369] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:54:56,378] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.065 seconds
+[2024-01-31 15:55:26,626] {processor.py:153} INFO - Started process (PID=11086) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:55:26,627] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:55:26,628] {logging_mixin.py:115} INFO - [2024-01-31 15:55:26,628] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:55:26,649] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:55:26,674] {logging_mixin.py:115} INFO - [2024-01-31 15:55:26,674] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:55:26,690] {logging_mixin.py:115} INFO - [2024-01-31 15:55:26,690] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:55:26,696] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.080 seconds
+[2024-01-31 15:55:56,923] {processor.py:153} INFO - Started process (PID=11096) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:55:56,924] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:55:56,925] {logging_mixin.py:115} INFO - [2024-01-31 15:55:56,925] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:55:56,947] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:55:56,971] {logging_mixin.py:115} INFO - [2024-01-31 15:55:56,971] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:55:56,986] {logging_mixin.py:115} INFO - [2024-01-31 15:55:56,986] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:55:56,992] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.074 seconds
+[2024-01-31 15:56:25,219] {processor.py:153} INFO - Started process (PID=11106) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:56:25,220] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:56:25,221] {logging_mixin.py:115} INFO - [2024-01-31 15:56:25,220] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:56:25,243] {logging_mixin.py:115} INFO - [2024-01-31 15:56:25,242] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 332, in <module>
+    create_ddl_postgres >> [aggregate_dim_table, aggregate_province_daily, aggregate_province_monthly, aggregate_province_yearly ,aggregate_district_daily , aggregate_district_monthly, aggregate_district_yearly] >> end_task
+NameError: name 'aggregate_district_daily' is not defined
+[2024-01-31 15:56:25,243] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:56:25,266] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.053 seconds
+[2024-01-31 15:56:35,292] {processor.py:153} INFO - Started process (PID=11111) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:56:35,293] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:56:35,294] {logging_mixin.py:115} INFO - [2024-01-31 15:56:35,294] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:56:35,310] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:56:35,366] {logging_mixin.py:115} INFO - [2024-01-31 15:56:35,366] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:56:35,384] {logging_mixin.py:115} INFO - [2024-01-31 15:56:35,384] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:56:35,396] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.109 seconds
+[2024-01-31 15:57:05,662] {processor.py:153} INFO - Started process (PID=11121) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:05,663] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:57:05,664] {logging_mixin.py:115} INFO - [2024-01-31 15:57:05,664] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:05,683] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:05,723] {logging_mixin.py:115} INFO - [2024-01-31 15:57:05,723] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:57:05,741] {logging_mixin.py:115} INFO - [2024-01-31 15:57:05,741] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:57:05,748] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.093 seconds
+[2024-01-31 15:57:16,855] {processor.py:153} INFO - Started process (PID=11131) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:16,856] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:57:16,857] {logging_mixin.py:115} INFO - [2024-01-31 15:57:16,857] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:16,877] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:16,930] {logging_mixin.py:115} INFO - [2024-01-31 15:57:16,930] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:57:16,950] {logging_mixin.py:115} INFO - [2024-01-31 15:57:16,950] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:57:16,962] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.114 seconds
+[2024-01-31 15:57:17,868] {processor.py:153} INFO - Started process (PID=11136) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:17,869] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:57:17,869] {logging_mixin.py:115} INFO - [2024-01-31 15:57:17,869] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:17,884] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:17,897] {logging_mixin.py:115} INFO - [2024-01-31 15:57:17,897] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:57:17,915] {logging_mixin.py:115} INFO - [2024-01-31 15:57:17,915] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:57:17,922] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.057 seconds
+[2024-01-31 15:57:40,110] {processor.py:153} INFO - Started process (PID=11141) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:40,112] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:57:40,113] {logging_mixin.py:115} INFO - [2024-01-31 15:57:40,113] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:40,138] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:40,153] {logging_mixin.py:115} INFO - [2024-01-31 15:57:40,153] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:57:40,174] {logging_mixin.py:115} INFO - [2024-01-31 15:57:40,174] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:57:40,183] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.082 seconds
+[2024-01-31 15:57:48,340] {processor.py:153} INFO - Started process (PID=11151) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:48,341] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:57:48,342] {logging_mixin.py:115} INFO - [2024-01-31 15:57:48,342] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:48,368] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:48,419] {logging_mixin.py:115} INFO - [2024-01-31 15:57:48,419] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:57:48,434] {logging_mixin.py:115} INFO - [2024-01-31 15:57:48,434] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:57:48,443] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.112 seconds
+[2024-01-31 15:57:49,352] {processor.py:153} INFO - Started process (PID=11156) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:49,353] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:57:49,353] {logging_mixin.py:115} INFO - [2024-01-31 15:57:49,353] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:49,367] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:49,379] {logging_mixin.py:115} INFO - [2024-01-31 15:57:49,379] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:57:49,395] {logging_mixin.py:115} INFO - [2024-01-31 15:57:49,395] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:57:49,403] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.054 seconds
+[2024-01-31 15:57:50,382] {processor.py:153} INFO - Started process (PID=11161) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:50,383] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:57:50,384] {logging_mixin.py:115} INFO - [2024-01-31 15:57:50,384] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:50,401] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:50,422] {logging_mixin.py:115} INFO - [2024-01-31 15:57:50,422] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:57:50,439] {logging_mixin.py:115} INFO - [2024-01-31 15:57:50,439] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:57:50,446] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.070 seconds
+[2024-01-31 15:57:57,499] {processor.py:153} INFO - Started process (PID=11166) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:57,500] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:57:57,501] {logging_mixin.py:115} INFO - [2024-01-31 15:57:57,501] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:57,517] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:57,533] {logging_mixin.py:115} INFO - [2024-01-31 15:57:57,533] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:57:57,550] {logging_mixin.py:115} INFO - [2024-01-31 15:57:57,550] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:57:57,559] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.063 seconds
+[2024-01-31 15:57:58,502] {processor.py:153} INFO - Started process (PID=11171) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:58,503] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:57:58,504] {logging_mixin.py:115} INFO - [2024-01-31 15:57:58,503] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:58,513] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:57:58,527] {logging_mixin.py:115} INFO - [2024-01-31 15:57:58,527] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:57:58,548] {logging_mixin.py:115} INFO - [2024-01-31 15:57:58,548] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:57:58,562] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.064 seconds
+[2024-01-31 15:58:01,549] {processor.py:153} INFO - Started process (PID=11176) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:58:01,550] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:58:01,551] {logging_mixin.py:115} INFO - [2024-01-31 15:58:01,551] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:58:01,570] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:58:01,584] {logging_mixin.py:115} INFO - [2024-01-31 15:58:01,584] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:58:01,598] {logging_mixin.py:115} INFO - [2024-01-31 15:58:01,597] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:58:01,605] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.062 seconds
+[2024-01-31 15:58:27,831] {processor.py:153} INFO - Started process (PID=11186) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:58:27,832] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:58:27,833] {logging_mixin.py:115} INFO - [2024-01-31 15:58:27,833] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:58:27,855] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:58:27,921] {logging_mixin.py:115} INFO - [2024-01-31 15:58:27,921] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:58:27,940] {logging_mixin.py:115} INFO - [2024-01-31 15:58:27,940] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:58:27,951] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.126 seconds
+[2024-01-31 15:58:55,148] {processor.py:153} INFO - Started process (PID=11196) to work on /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:58:55,149] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-01-31 15:58:55,150] {logging_mixin.py:115} INFO - [2024-01-31 15:58:55,150] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:58:55,169] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-01-31 15:58:55,183] {logging_mixin.py:115} INFO - [2024-01-31 15:58:55,183] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-01-31 15:58:55,200] {logging_mixin.py:115} INFO - [2024-01-31 15:58:55,200] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-01-31 15:58:55,211] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.068 seconds

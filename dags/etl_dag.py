@@ -243,7 +243,7 @@ def _aggregate_dim_table(ti):
         column_names = inspector.get_columns("staging_covid_dataset")
         const_status = ['suspect', 'closecontact', 'probable', 'confirmation']
         list_case = []
-        serialize = 0
+        serialize = 1
         for column in column_names:
             for status in const_status: 
                 if status in column['name']:
@@ -304,8 +304,30 @@ with DAG(
         execution_timeout=timedelta(minutes=5)
     )
     
+    aggregate_province_daily=EmptyOperator(
+        task_id='aggregate_province_daily'
+    )
+    
+    aggregate_province_monthly=EmptyOperator(
+        task_id='aggregate_province_monthly'
+    )
+    
+    aggregate_province_yearly=EmptyOperator(
+        task_id='aggregate_province_yearly'
+    )
+    
+    aggregate_district_monthly=EmptyOperator(
+        task_id='aggregate_district_monthly'
+    )
+    
+    aggregate_district_yearly=EmptyOperator(
+        task_id='aggregate_district_yearly'
+    )
+    
     end_task=EmptyOperator(
         task_id='end_task'
     )
     
-    start_task >> get_data_covid >> import_file_to_mysql >> create_ddl_postgres >> aggregate_dim_table >> end_task
+    start_task >> get_data_covid >> import_file_to_mysql >> create_ddl_postgres >> aggregate_dim_table
+    aggregate_dim_table >> aggregate_district_monthly >> aggregate_district_yearly >> end_task
+    aggregate_dim_table >> aggregate_province_daily >> aggregate_province_monthly >> aggregate_province_yearly >> end_task
