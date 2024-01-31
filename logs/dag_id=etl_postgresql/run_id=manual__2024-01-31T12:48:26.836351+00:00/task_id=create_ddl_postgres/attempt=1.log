@@ -1,0 +1,2 @@
+[2024-01-31 12:48:27,775] {taskinstance.py:1153} INFO - Dependencies not met for <TaskInstance: etl_postgresql.create_ddl_postgres manual__2024-01-31T12:48:26.836351+00:00 [queued]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_tasks_state={'total': 1, 'successes': 0, 'skipped': 0, 'failed': 0, 'upstream_failed': 0, 'done': 0}, upstream_task_ids={'import_file_to_mysql'}
+[2024-01-31 12:48:27,776] {local_task_job.py:101} INFO - Task is not able to be run

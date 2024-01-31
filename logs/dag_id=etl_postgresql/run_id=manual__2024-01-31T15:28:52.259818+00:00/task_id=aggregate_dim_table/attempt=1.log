@@ -1,0 +1,29 @@
+[2024-01-31 15:29:17,466] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T15:28:52.259818+00:00 [queued]>
+[2024-01-31 15:29:17,473] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T15:28:52.259818+00:00 [queued]>
+[2024-01-31 15:29:17,473] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 15:29:17,473] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-01-31 15:29:17,473] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 15:29:17,482] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): aggregate_dim_table> on 2024-01-31 15:28:52.259818+00:00
+[2024-01-31 15:29:17,485] {standard_task_runner.py:52} INFO - Started process 10039 to run task
+[2024-01-31 15:29:17,488] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'aggregate_dim_table', 'manual__2024-01-31T15:28:52.259818+00:00', '--job-id', '192', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp60e4_76i', '--error-file', '/tmp/tmpek2n3edk']
+[2024-01-31 15:29:17,489] {standard_task_runner.py:80} INFO - Job 192: Subtask aggregate_dim_table
+[2024-01-31 15:29:17,525] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T15:28:52.259818+00:00 [running]> on host d99f9e65d396
+[2024-01-31 15:29:17,570] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=aggregate_dim_table
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-31T15:28:52.259818+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-01-31T15:28:52.259818+00:00
+[2024-01-31 15:29:20,461] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 15:29:23,713] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 15:29:26,655] {logging_mixin.py:115} INFO - Successfully install pymysql
+[2024-01-31 15:29:29,712] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 15:29:29,759] {logging_mixin.py:115} INFO - <sqlalchemy.engine.result.ChunkedIteratorResult object at 0xffff90058910>
+[2024-01-31 15:29:29,760] {logging_mixin.py:115} INFO - An error occurred: 'nama_prov' is an invalid keyword argument for Province
+[2024-01-31 15:29:29,760] {python.py:173} INFO - Done. Returned value was: end
+[2024-01-31 15:29:29,784] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_postgresql, task_id=aggregate_dim_table, execution_date=20240131T152852, start_date=20240131T152917, end_date=20240131T152929
+[2024-01-31 15:29:29,801] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-01-31 15:29:29,826] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

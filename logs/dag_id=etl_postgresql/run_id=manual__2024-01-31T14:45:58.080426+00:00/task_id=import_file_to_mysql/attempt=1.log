@@ -1,0 +1,28 @@
+[2024-01-31 14:46:03,611] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.import_file_to_mysql manual__2024-01-31T14:45:58.080426+00:00 [queued]>
+[2024-01-31 14:46:03,617] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.import_file_to_mysql manual__2024-01-31T14:45:58.080426+00:00 [queued]>
+[2024-01-31 14:46:03,617] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 14:46:03,617] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-01-31 14:46:03,618] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 14:46:03,626] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): import_file_to_mysql> on 2024-01-31 14:45:58.080426+00:00
+[2024-01-31 14:46:03,630] {standard_task_runner.py:52} INFO - Started process 8212 to run task
+[2024-01-31 14:46:03,633] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'import_file_to_mysql', 'manual__2024-01-31T14:45:58.080426+00:00', '--job-id', '158', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpl_bhsp0c', '--error-file', '/tmp/tmpr_503y5d']
+[2024-01-31 14:46:03,634] {standard_task_runner.py:80} INFO - Job 158: Subtask import_file_to_mysql
+[2024-01-31 14:46:03,672] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.import_file_to_mysql manual__2024-01-31T14:45:58.080426+00:00 [running]> on host d99f9e65d396
+[2024-01-31 14:46:03,719] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=import_file_to_mysql
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-31T14:45:58.080426+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-01-31T14:45:58.080426+00:00
+[2024-01-31 14:46:04,544] {logging_mixin.py:115} INFO - Error install json
+[2024-01-31 14:46:07,516] {logging_mixin.py:115} INFO - Successfully install pandas
+[2024-01-31 14:46:10,408] {logging_mixin.py:115} INFO - Successfully install pymysql
+[2024-01-31 14:46:13,834] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 14:46:16,743] {logging_mixin.py:115} INFO - Successfully install pymysql
+[2024-01-31 14:46:16,858] {python.py:173} INFO - Done. Returned value was: import to mysql
+[2024-01-31 14:46:16,876] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_postgresql, task_id=import_file_to_mysql, execution_date=20240131T144558, start_date=20240131T144603, end_date=20240131T144616
+[2024-01-31 14:46:16,914] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-01-31 14:46:16,937] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

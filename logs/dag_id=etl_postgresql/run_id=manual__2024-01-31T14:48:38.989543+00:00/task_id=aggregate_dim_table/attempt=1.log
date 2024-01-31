@@ -1,0 +1,56 @@
+[2024-01-31 14:49:04,687] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T14:48:38.989543+00:00 [queued]>
+[2024-01-31 14:49:04,693] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T14:48:38.989543+00:00 [queued]>
+[2024-01-31 14:49:04,693] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 14:49:04,694] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-01-31 14:49:04,694] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 14:49:04,702] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): aggregate_dim_table> on 2024-01-31 14:48:38.989543+00:00
+[2024-01-31 14:49:04,706] {standard_task_runner.py:52} INFO - Started process 8391 to run task
+[2024-01-31 14:49:04,709] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'aggregate_dim_table', 'manual__2024-01-31T14:48:38.989543+00:00', '--job-id', '164', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp0awfs_0s', '--error-file', '/tmp/tmpwzx7m6y1']
+[2024-01-31 14:49:04,710] {standard_task_runner.py:80} INFO - Job 164: Subtask aggregate_dim_table
+[2024-01-31 14:49:04,745] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T14:48:38.989543+00:00 [running]> on host d99f9e65d396
+[2024-01-31 14:49:04,792] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=aggregate_dim_table
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-31T14:48:38.989543+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-01-31T14:48:38.989543+00:00
+[2024-01-31 14:49:07,651] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 14:49:10,503] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 14:49:13,347] {logging_mixin.py:115} INFO - Successfully install pymysql
+[2024-01-31 14:49:16,381] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 14:49:16,420] {logging_mixin.py:115} INFO - ('Jawa Barat', '32')
+[2024-01-31 14:49:16,422] {logging_mixin.py:115} INFO - ('Kabupaten Bandung', '3204')
+[2024-01-31 14:49:16,422] {logging_mixin.py:115} INFO - ('Kabupaten Bandung Barat', '3217')
+[2024-01-31 14:49:16,422] {logging_mixin.py:115} INFO - ('Kabupaten Bekasi', '3216')
+[2024-01-31 14:49:16,423] {logging_mixin.py:115} INFO - ('Kabupaten Bogor', '3201')
+[2024-01-31 14:49:16,423] {logging_mixin.py:115} INFO - ('Kabupaten Ciamis', '3207')
+[2024-01-31 14:49:16,423] {logging_mixin.py:115} INFO - ('Kabupaten Cianjur', '3203')
+[2024-01-31 14:49:16,423] {logging_mixin.py:115} INFO - ('Kabupaten Cirebon', '3209')
+[2024-01-31 14:49:16,423] {logging_mixin.py:115} INFO - ('Kabupaten Garut', '3205')
+[2024-01-31 14:49:16,424] {logging_mixin.py:115} INFO - ('Kabupaten Indramayu', '3212')
+[2024-01-31 14:49:16,424] {logging_mixin.py:115} INFO - ('Kabupaten Karawang', '3215')
+[2024-01-31 14:49:16,424] {logging_mixin.py:115} INFO - ('Kabupaten Kuningan', '3208')
+[2024-01-31 14:49:16,424] {logging_mixin.py:115} INFO - ('Kabupaten Majalengka', '3210')
+[2024-01-31 14:49:16,424] {logging_mixin.py:115} INFO - ('Kabupaten Pangandaran', '3218')
+[2024-01-31 14:49:16,424] {logging_mixin.py:115} INFO - ('Kabupaten Purwakarta', '3214')
+[2024-01-31 14:49:16,424] {logging_mixin.py:115} INFO - ('Kabupaten Subang', '3213')
+[2024-01-31 14:49:16,425] {logging_mixin.py:115} INFO - ('Kabupaten Sukabumi', '3202')
+[2024-01-31 14:49:16,425] {logging_mixin.py:115} INFO - ('Kabupaten Sumedang', '3211')
+[2024-01-31 14:49:16,425] {logging_mixin.py:115} INFO - ('Kabupaten Tasikmalaya', '3206')
+[2024-01-31 14:49:16,425] {logging_mixin.py:115} INFO - ('Kota Bandung', '3273')
+[2024-01-31 14:49:16,425] {logging_mixin.py:115} INFO - ('Kota Banjar', '3279')
+[2024-01-31 14:49:16,425] {logging_mixin.py:115} INFO - ('Kota Bekasi', '3275')
+[2024-01-31 14:49:16,426] {logging_mixin.py:115} INFO - ('Kota Bogor', '3271')
+[2024-01-31 14:49:16,426] {logging_mixin.py:115} INFO - ('Kota Cimahi', '3277')
+[2024-01-31 14:49:16,426] {logging_mixin.py:115} INFO - ('Kota Cirebon', '3274')
+[2024-01-31 14:49:16,426] {logging_mixin.py:115} INFO - ('Kota Depok', '3276')
+[2024-01-31 14:49:16,426] {logging_mixin.py:115} INFO - ('Kota Sukabumi', '3272')
+[2024-01-31 14:49:16,427] {logging_mixin.py:115} INFO - ('Kota Tasikmalaya', '3278')
+[2024-01-31 14:49:16,435] {logging_mixin.py:115} INFO - [{'name': 'id', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'CLOSECONTACT', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'CONFIRMATION', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'PROBABLE', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'SUSPECT', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'closecontact_dikarantina', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'closecontact_discarded', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'closecontact_meninggal', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'confirmation_meninggal', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'confirmation_sembuh', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'kode_kab', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': True}, {'name': 'kode_prov', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': True}, {'name': 'nama_kab', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': True}, {'name': 'nama_prov', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': True}, {'name': 'probable_diisolasi', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'probable_discarded', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'probable_meninggal', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'suspect_diisolasi', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'suspect_discarded', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'suspect_meninggal', 'type': BIGINT(), 'default': None, 'comment': None, 'nullable': True, 'autoincrement': False}, {'name': 'tanggal', 'type': TEXT(), 'default': None, 'comment': None, 'nullable': True}]
+[2024-01-31 14:49:16,436] {python.py:173} INFO - Done. Returned value was: None
+[2024-01-31 14:49:16,446] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_postgresql, task_id=aggregate_dim_table, execution_date=20240131T144838, start_date=20240131T144904, end_date=20240131T144916
+[2024-01-31 14:49:16,498] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-01-31 14:49:16,519] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

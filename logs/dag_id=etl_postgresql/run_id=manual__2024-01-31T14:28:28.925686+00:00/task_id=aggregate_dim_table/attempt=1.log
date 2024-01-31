@@ -1,0 +1,56 @@
+[2024-01-31 14:28:46,774] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T14:28:28.925686+00:00 [queued]>
+[2024-01-31 14:28:46,780] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T14:28:28.925686+00:00 [queued]>
+[2024-01-31 14:28:46,781] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 14:28:46,781] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-01-31 14:28:46,781] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 14:28:46,789] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): aggregate_dim_table> on 2024-01-31 14:28:28.925686+00:00
+[2024-01-31 14:28:46,793] {standard_task_runner.py:52} INFO - Started process 7445 to run task
+[2024-01-31 14:28:46,795] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'aggregate_dim_table', 'manual__2024-01-31T14:28:28.925686+00:00', '--job-id', '148', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp1jzkap6w', '--error-file', '/tmp/tmpgyjk7xtm']
+[2024-01-31 14:28:46,796] {standard_task_runner.py:80} INFO - Job 148: Subtask aggregate_dim_table
+[2024-01-31 14:28:46,830] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T14:28:28.925686+00:00 [running]> on host d99f9e65d396
+[2024-01-31 14:28:46,876] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=aggregate_dim_table
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-31T14:28:28.925686+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-01-31T14:28:28.925686+00:00
+[2024-01-31 14:28:49,662] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 14:28:52,500] {logging_mixin.py:115} INFO - Successfully install pymysql
+[2024-01-31 14:28:52,564] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl_dag.py", line 209, in _aggregate_dim_table
+    column_names = inspector.get_columns(StagingData)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/reflection.py", line 498, in get_columns
+    conn, table_name, schema, info_cache=self.info_cache, **kw
+  File "<string>", line 2, in get_columns
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/reflection.py", line 55, in cache
+    ret = fn(self, con, *args, **kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/mysql/base.py", line 3004, in get_columns
+    connection, table_name, schema, **kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/mysql/base.py", line 3249, in _parsed_state_or_create
+    info_cache=kw.get("info_cache", None),
+  File "<string>", line 2, in _setup_parser
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/reflection.py", line 55, in cache
+    ret = fn(self, con, *args, **kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/mysql/base.py", line 3269, in _setup_parser
+    schema, table_name
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/mysql/base.py", line 2506, in _quote_free_identifiers
+    return tuple([self.quote_identifier(i) for i in ids if i is not None])
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/mysql/base.py", line 2506, in <listcomp>
+    return tuple([self.quote_identifier(i) for i in ids if i is not None])
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/compiler.py", line 4764, in quote_identifier
+    + self.final_quote
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/compiler.py", line 4722, in _escape_identifier
+    value = value.replace(self.escape_quote, self.escape_to_quote)
+AttributeError: type object 'StagingData' has no attribute 'replace'
+[2024-01-31 14:28:52,573] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_postgresql, task_id=aggregate_dim_table, execution_date=20240131T142828, start_date=20240131T142846, end_date=20240131T142852
+[2024-01-31 14:28:52,581] {standard_task_runner.py:97} ERROR - Failed to execute job 148 for task aggregate_dim_table (type object 'StagingData' has no attribute 'replace'; 7445)
+[2024-01-31 14:28:52,618] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-01-31 14:28:52,640] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

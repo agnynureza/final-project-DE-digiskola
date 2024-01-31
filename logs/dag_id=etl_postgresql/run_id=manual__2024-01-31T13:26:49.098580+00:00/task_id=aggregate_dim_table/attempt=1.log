@@ -1,0 +1,2 @@
+[2024-01-31 13:26:49,493] {taskinstance.py:1153} INFO - Dependencies not met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T13:26:49.098580+00:00 [queued]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_tasks_state={'total': 1, 'successes': 0, 'skipped': 0, 'failed': 0, 'upstream_failed': 0, 'done': 0}, upstream_task_ids={'create_ddl_postgres'}
+[2024-01-31 13:26:49,494] {local_task_job.py:101} INFO - Task is not able to be run

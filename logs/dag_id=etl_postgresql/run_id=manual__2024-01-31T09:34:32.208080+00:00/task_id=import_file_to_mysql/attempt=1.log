@@ -1,0 +1,24 @@
+[2024-01-31 09:34:34,338] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.import_file_to_mysql manual__2024-01-31T09:34:32.208080+00:00 [queued]>
+[2024-01-31 09:34:34,343] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.import_file_to_mysql manual__2024-01-31T09:34:32.208080+00:00 [queued]>
+[2024-01-31 09:34:34,343] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 09:34:34,344] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-01-31 09:34:34,344] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 09:34:34,350] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): import_file_to_mysql> on 2024-01-31 09:34:32.208080+00:00
+[2024-01-31 09:34:34,353] {standard_task_runner.py:52} INFO - Started process 1254 to run task
+[2024-01-31 09:34:34,355] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'import_file_to_mysql', 'manual__2024-01-31T09:34:32.208080+00:00', '--job-id', '90', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpf_r1cr9a', '--error-file', '/tmp/tmpv51hodld']
+[2024-01-31 09:34:34,356] {standard_task_runner.py:80} INFO - Job 90: Subtask import_file_to_mysql
+[2024-01-31 09:34:34,386] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.import_file_to_mysql manual__2024-01-31T09:34:32.208080+00:00 [running]> on host d99f9e65d396
+[2024-01-31 09:34:34,426] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=import_file_to_mysql
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-31T09:34:32.208080+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-01-31T09:34:32.208080+00:00
+[2024-01-31 09:34:34,427] {logging_mixin.py:115} INFO - masuk kesini coy
+[2024-01-31 09:34:34,432] {python.py:173} INFO - Done. Returned value was: None
+[2024-01-31 09:34:34,440] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_postgresql, task_id=import_file_to_mysql, execution_date=20240131T093432, start_date=20240131T093434, end_date=20240131T093434
+[2024-01-31 09:34:34,449] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-01-31 09:34:34,470] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

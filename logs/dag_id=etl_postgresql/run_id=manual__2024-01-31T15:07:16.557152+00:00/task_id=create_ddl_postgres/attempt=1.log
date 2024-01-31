@@ -1,0 +1,26 @@
+[2024-01-31 15:07:35,599] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.create_ddl_postgres manual__2024-01-31T15:07:16.557152+00:00 [queued]>
+[2024-01-31 15:07:35,605] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.create_ddl_postgres manual__2024-01-31T15:07:16.557152+00:00 [queued]>
+[2024-01-31 15:07:35,605] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 15:07:35,605] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-01-31 15:07:35,606] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 15:07:35,614] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): create_ddl_postgres> on 2024-01-31 15:07:16.557152+00:00
+[2024-01-31 15:07:35,617] {standard_task_runner.py:52} INFO - Started process 9151 to run task
+[2024-01-31 15:07:35,620] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'create_ddl_postgres', 'manual__2024-01-31T15:07:16.557152+00:00', '--job-id', '175', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp45lgqjkv', '--error-file', '/tmp/tmplc8e2nc8']
+[2024-01-31 15:07:35,621] {standard_task_runner.py:80} INFO - Job 175: Subtask create_ddl_postgres
+[2024-01-31 15:07:35,656] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.create_ddl_postgres manual__2024-01-31T15:07:16.557152+00:00 [running]> on host d99f9e65d396
+[2024-01-31 15:07:35,704] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=create_ddl_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-31T15:07:16.557152+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-01-31T15:07:16.557152+00:00
+[2024-01-31 15:07:38,547] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 15:07:41,412] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 15:07:41,444] {logging_mixin.py:115} INFO - success migrate table
+[2024-01-31 15:07:41,444] {python.py:173} INFO - Done. Returned value was: None
+[2024-01-31 15:07:41,454] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_postgresql, task_id=create_ddl_postgres, execution_date=20240131T150716, start_date=20240131T150735, end_date=20240131T150741
+[2024-01-31 15:07:41,500] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-01-31 15:07:41,523] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

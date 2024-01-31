@@ -1,0 +1,170 @@
+[2024-01-31 13:49:13,692] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T13:48:59.085169+00:00 [queued]>
+[2024-01-31 13:49:13,698] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T13:48:59.085169+00:00 [queued]>
+[2024-01-31 13:49:13,698] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 13:49:13,698] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-01-31 13:49:13,699] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 13:49:13,707] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): aggregate_dim_table> on 2024-01-31 13:48:59.085169+00:00
+[2024-01-31 13:49:13,710] {standard_task_runner.py:52} INFO - Started process 6913 to run task
+[2024-01-31 13:49:13,713] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'aggregate_dim_table', 'manual__2024-01-31T13:48:59.085169+00:00', '--job-id', '139', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpyjgdfskg', '--error-file', '/tmp/tmpoojea7wf']
+[2024-01-31 13:49:13,714] {standard_task_runner.py:80} INFO - Job 139: Subtask aggregate_dim_table
+[2024-01-31 13:49:13,748] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T13:48:59.085169+00:00 [running]> on host d99f9e65d396
+[2024-01-31 13:49:13,796] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=aggregate_dim_table
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-31T13:48:59.085169+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-01-31T13:48:59.085169+00:00
+[2024-01-31 13:49:16,642] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 13:49:19,539] {logging_mixin.py:115} INFO - Successfully install pymysql
+[2024-01-31 13:49:19,599] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004bcd0>
+[2024-01-31 13:49:19,599] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004bd90>
+[2024-01-31 13:49:19,599] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004be50>
+[2024-01-31 13:49:19,599] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004bf10>
+[2024-01-31 13:49:19,600] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004bfd0>
+[2024-01-31 13:49:19,600] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d110>
+[2024-01-31 13:49:19,600] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d1d0>
+[2024-01-31 13:49:19,600] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d290>
+[2024-01-31 13:49:19,600] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d350>
+[2024-01-31 13:49:19,601] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d3d0>
+[2024-01-31 13:49:19,601] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d490>
+[2024-01-31 13:49:19,601] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d550>
+[2024-01-31 13:49:19,601] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d610>
+[2024-01-31 13:49:19,601] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d6d0>
+[2024-01-31 13:49:19,602] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d790>
+[2024-01-31 13:49:19,602] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d850>
+[2024-01-31 13:49:19,602] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d910>
+[2024-01-31 13:49:19,602] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004d9d0>
+[2024-01-31 13:49:19,602] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004da90>
+[2024-01-31 13:49:19,602] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004db50>
+[2024-01-31 13:49:19,603] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004dc10>
+[2024-01-31 13:49:19,603] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004dcd0>
+[2024-01-31 13:49:19,603] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004dd90>
+[2024-01-31 13:49:19,603] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004de50>
+[2024-01-31 13:49:19,603] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004df10>
+[2024-01-31 13:49:19,603] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9004dfd0>
+[2024-01-31 13:49:19,604] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900520d0>
+[2024-01-31 13:49:19,604] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052190>
+[2024-01-31 13:49:19,604] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052250>
+[2024-01-31 13:49:19,604] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052310>
+[2024-01-31 13:49:19,604] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900523d0>
+[2024-01-31 13:49:19,604] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052490>
+[2024-01-31 13:49:19,605] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052550>
+[2024-01-31 13:49:19,605] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052610>
+[2024-01-31 13:49:19,605] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900526d0>
+[2024-01-31 13:49:19,605] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052790>
+[2024-01-31 13:49:19,605] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052850>
+[2024-01-31 13:49:19,606] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052910>
+[2024-01-31 13:49:19,606] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900529d0>
+[2024-01-31 13:49:19,606] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052a90>
+[2024-01-31 13:49:19,606] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052b50>
+[2024-01-31 13:49:19,606] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052c10>
+[2024-01-31 13:49:19,606] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052cd0>
+[2024-01-31 13:49:19,607] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052d90>
+[2024-01-31 13:49:19,607] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052e50>
+[2024-01-31 13:49:19,607] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052f10>
+[2024-01-31 13:49:19,607] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90052fd0>
+[2024-01-31 13:49:19,607] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900590d0>
+[2024-01-31 13:49:19,607] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059190>
+[2024-01-31 13:49:19,608] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059250>
+[2024-01-31 13:49:19,608] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059310>
+[2024-01-31 13:49:19,608] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900593d0>
+[2024-01-31 13:49:19,608] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059490>
+[2024-01-31 13:49:19,608] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059550>
+[2024-01-31 13:49:19,608] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059610>
+[2024-01-31 13:49:19,609] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900596d0>
+[2024-01-31 13:49:19,609] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059790>
+[2024-01-31 13:49:19,609] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059850>
+[2024-01-31 13:49:19,609] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059910>
+[2024-01-31 13:49:19,609] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900599d0>
+[2024-01-31 13:49:19,610] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059a90>
+[2024-01-31 13:49:19,610] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059b50>
+[2024-01-31 13:49:19,610] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059c10>
+[2024-01-31 13:49:19,610] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059cd0>
+[2024-01-31 13:49:19,610] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059d90>
+[2024-01-31 13:49:19,610] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059e50>
+[2024-01-31 13:49:19,610] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059f10>
+[2024-01-31 13:49:19,611] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90059fd0>
+[2024-01-31 13:49:19,611] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d0d0>
+[2024-01-31 13:49:19,611] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d190>
+[2024-01-31 13:49:19,611] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d250>
+[2024-01-31 13:49:19,611] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d310>
+[2024-01-31 13:49:19,611] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d3d0>
+[2024-01-31 13:49:19,612] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d490>
+[2024-01-31 13:49:19,612] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d550>
+[2024-01-31 13:49:19,612] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d610>
+[2024-01-31 13:49:19,612] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d6d0>
+[2024-01-31 13:49:19,612] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d790>
+[2024-01-31 13:49:19,612] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d850>
+[2024-01-31 13:49:19,613] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d910>
+[2024-01-31 13:49:19,613] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005d9d0>
+[2024-01-31 13:49:19,613] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005da90>
+[2024-01-31 13:49:19,613] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005db50>
+[2024-01-31 13:49:19,613] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005dc10>
+[2024-01-31 13:49:19,613] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005dcd0>
+[2024-01-31 13:49:19,613] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005dd90>
+[2024-01-31 13:49:19,614] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005de50>
+[2024-01-31 13:49:19,614] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005df10>
+[2024-01-31 13:49:19,614] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9005dfd0>
+[2024-01-31 13:49:19,614] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900630d0>
+[2024-01-31 13:49:19,614] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063190>
+[2024-01-31 13:49:19,614] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063250>
+[2024-01-31 13:49:19,615] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063310>
+[2024-01-31 13:49:19,615] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900633d0>
+[2024-01-31 13:49:19,615] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063490>
+[2024-01-31 13:49:19,615] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063550>
+[2024-01-31 13:49:19,615] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063610>
+[2024-01-31 13:49:19,615] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900636d0>
+[2024-01-31 13:49:19,616] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063790>
+[2024-01-31 13:49:19,616] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063850>
+[2024-01-31 13:49:19,616] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063910>
+[2024-01-31 13:49:19,616] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff900639d0>
+[2024-01-31 13:49:19,616] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063a90>
+[2024-01-31 13:49:19,616] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063b50>
+[2024-01-31 13:49:19,616] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063c10>
+[2024-01-31 13:49:19,617] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063cd0>
+[2024-01-31 13:49:19,617] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063d90>
+[2024-01-31 13:49:19,617] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063e50>
+[2024-01-31 13:49:19,617] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063f10>
+[2024-01-31 13:49:19,617] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff90063fd0>
+[2024-01-31 13:49:19,617] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a0d0>
+[2024-01-31 13:49:19,618] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a190>
+[2024-01-31 13:49:19,618] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a250>
+[2024-01-31 13:49:19,618] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a310>
+[2024-01-31 13:49:19,618] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a3d0>
+[2024-01-31 13:49:19,618] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a490>
+[2024-01-31 13:49:19,618] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a550>
+[2024-01-31 13:49:19,618] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a610>
+[2024-01-31 13:49:19,619] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a6d0>
+[2024-01-31 13:49:19,619] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a790>
+[2024-01-31 13:49:19,619] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a850>
+[2024-01-31 13:49:19,619] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a910>
+[2024-01-31 13:49:19,619] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006a9d0>
+[2024-01-31 13:49:19,619] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006aa90>
+[2024-01-31 13:49:19,619] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006ab50>
+[2024-01-31 13:49:19,620] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006ac10>
+[2024-01-31 13:49:19,620] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006acd0>
+[2024-01-31 13:49:19,620] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006ad90>
+[2024-01-31 13:49:19,620] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006ae50>
+[2024-01-31 13:49:19,620] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006af10>
+[2024-01-31 13:49:19,620] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006afd0>
+[2024-01-31 13:49:19,620] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f0d0>
+[2024-01-31 13:49:19,621] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f190>
+[2024-01-31 13:49:19,621] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f250>
+[2024-01-31 13:49:19,621] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f310>
+[2024-01-31 13:49:19,621] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f3d0>
+[2024-01-31 13:49:19,621] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f490>
+[2024-01-31 13:49:19,621] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f550>
+[2024-01-31 13:49:19,622] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f610>
+[2024-01-31 13:49:19,622] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f6d0>
+[2024-01-31 13:49:19,622] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f790>
+[2024-01-31 13:49:19,622] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f850>
+[2024-01-31 13:49:19,622] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f910>
+[2024-01-31 13:49:19,622] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006f9d0>
+[2024-01-31 13:49:19,622] {logging_mixin.py:115} INFO - <unusual_prefix_52d2187e6adbc9e546561e4e4242209b40716252_etl_dag._aggregate_dim_table.<locals>.StagingData object at 0xffff9006fa90>
+[2024-01-31 13:49:19,623] {python.py:173} INFO - Done. Returned value was: None
+[2024-01-31 13:49:19,632] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_postgresql, task_id=aggregate_dim_table, execution_date=20240131T134859, start_date=20240131T134913, end_date=20240131T134919
+[2024-01-31 13:49:19,645] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-01-31 13:49:19,664] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

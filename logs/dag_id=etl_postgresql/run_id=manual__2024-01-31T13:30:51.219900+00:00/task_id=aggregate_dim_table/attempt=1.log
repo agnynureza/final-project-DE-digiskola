@@ -1,0 +1,50 @@
+[2024-01-31 13:31:05,694] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T13:30:51.219900+00:00 [queued]>
+[2024-01-31 13:31:05,700] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T13:30:51.219900+00:00 [queued]>
+[2024-01-31 13:31:05,701] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 13:31:05,701] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-01-31 13:31:05,701] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 13:31:05,709] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): aggregate_dim_table> on 2024-01-31 13:30:51.219900+00:00
+[2024-01-31 13:31:05,712] {standard_task_runner.py:52} INFO - Started process 6280 to run task
+[2024-01-31 13:31:05,715] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'aggregate_dim_table', 'manual__2024-01-31T13:30:51.219900+00:00', '--job-id', '122', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpkjlgkttu', '--error-file', '/tmp/tmpmjcn46et']
+[2024-01-31 13:31:05,716] {standard_task_runner.py:80} INFO - Job 122: Subtask aggregate_dim_table
+[2024-01-31 13:31:05,750] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T13:30:51.219900+00:00 [running]> on host d99f9e65d396
+[2024-01-31 13:31:05,795] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=aggregate_dim_table
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-31T13:30:51.219900+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-01-31T13:30:51.219900+00:00
+[2024-01-31 13:31:08,612] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 13:31:11,391] {logging_mixin.py:115} INFO - Successfully install pymysql
+[2024-01-31 13:31:11,449] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl_dag.py", line 192, in _aggregate_dim_table
+    select_query = select([table_name])
+  File "<string>", line 2, in select
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/selectable.py", line 4902, in _create
+    return cls.create_legacy_select(*args, **kw)
+  File "<string>", line 2, in create_legacy_select
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 390, in warned
+    return fn(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/selectable.py", line 4784, in create_legacy_select
+    for c in columns
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/selectable.py", line 4784, in <listcomp>
+    for c in columns
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/coercions.py", line 176, in expect
+    element, argname=argname, **kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/coercions.py", line 375, in _literal_coercion
+    return self._text_coercion(element, argname, **kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/coercions.py", line 818, in _text_coercion
+    else "column",
+sqlalchemy.exc.ArgumentError: Textual column expression 'staging_covid_dataset' should be explicitly declared with text('staging_covid_dataset'), or use column('staging_covid_dataset') for more specificity
+[2024-01-31 13:31:11,457] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_postgresql, task_id=aggregate_dim_table, execution_date=20240131T133051, start_date=20240131T133105, end_date=20240131T133111
+[2024-01-31 13:31:11,465] {standard_task_runner.py:97} ERROR - Failed to execute job 122 for task aggregate_dim_table (Textual column expression 'staging_covid_dataset' should be explicitly declared with text('staging_covid_dataset'), or use column('staging_covid_dataset') for more specificity; 6280)
+[2024-01-31 13:31:11,477] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-01-31 13:31:11,498] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

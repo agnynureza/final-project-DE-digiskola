@@ -1,0 +1,28 @@
+[2024-01-31 09:20:47,198] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.get_data_covid manual__2024-01-31T09:20:45.353677+00:00 [queued]>
+[2024-01-31 09:20:47,203] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.get_data_covid manual__2024-01-31T09:20:45.353677+00:00 [queued]>
+[2024-01-31 09:20:47,204] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 09:20:47,204] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-01-31 09:20:47,204] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 09:20:47,212] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): get_data_covid> on 2024-01-31 09:20:45.353677+00:00
+[2024-01-31 09:20:47,215] {standard_task_runner.py:52} INFO - Started process 824 to run task
+[2024-01-31 09:20:47,217] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'get_data_covid', 'manual__2024-01-31T09:20:45.353677+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpbj2uww51', '--error-file', '/tmp/tmparruw_ay']
+[2024-01-31 09:20:47,218] {standard_task_runner.py:80} INFO - Job 82: Subtask get_data_covid
+[2024-01-31 09:20:47,247] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.get_data_covid manual__2024-01-31T09:20:45.353677+00:00 [running]> on host d99f9e65d396
+[2024-01-31 09:20:47,287] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=get_data_covid
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-31T09:20:45.353677+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-01-31T09:20:45.353677+00:00
+[2024-01-31 09:20:47,288] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2024-01-31 09:20:47,288] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'echo pwd']
+[2024-01-31 09:20:47,294] {subprocess.py:85} INFO - Output:
+[2024-01-31 09:20:47,296] {subprocess.py:92} INFO - pwd
+[2024-01-31 09:20:47,296] {subprocess.py:96} INFO - Command exited with return code 0
+[2024-01-31 09:20:47,313] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_postgresql, task_id=get_data_covid, execution_date=20240131T092045, start_date=20240131T092047, end_date=20240131T092047
+[2024-01-31 09:20:47,351] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-01-31 09:20:47,372] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

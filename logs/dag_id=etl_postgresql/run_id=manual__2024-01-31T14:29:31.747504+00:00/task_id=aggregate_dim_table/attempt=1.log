@@ -1,0 +1,46 @@
+[2024-01-31 14:29:48,973] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T14:29:31.747504+00:00 [queued]>
+[2024-01-31 14:29:48,979] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T14:29:31.747504+00:00 [queued]>
+[2024-01-31 14:29:48,980] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 14:29:48,980] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-01-31 14:29:48,980] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 14:29:48,989] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): aggregate_dim_table> on 2024-01-31 14:29:31.747504+00:00
+[2024-01-31 14:29:48,992] {standard_task_runner.py:52} INFO - Started process 7519 to run task
+[2024-01-31 14:29:48,995] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'aggregate_dim_table', 'manual__2024-01-31T14:29:31.747504+00:00', '--job-id', '152', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpkze1dstx', '--error-file', '/tmp/tmp4yriil_u']
+[2024-01-31 14:29:48,996] {standard_task_runner.py:80} INFO - Job 152: Subtask aggregate_dim_table
+[2024-01-31 14:29:49,030] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T14:29:31.747504+00:00 [running]> on host d99f9e65d396
+[2024-01-31 14:29:49,076] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=aggregate_dim_table
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-31T14:29:31.747504+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-01-31T14:29:31.747504+00:00
+[2024-01-31 14:29:51,924] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 14:29:54,826] {logging_mixin.py:115} INFO - Successfully install pymysql
+[2024-01-31 14:29:54,891] {logging_mixin.py:115} INFO - id
+[2024-01-31 14:29:54,891] {logging_mixin.py:115} INFO - CLOSECONTACT
+[2024-01-31 14:29:54,892] {logging_mixin.py:115} INFO - CONFIRMATION
+[2024-01-31 14:29:54,892] {logging_mixin.py:115} INFO - PROBABLE
+[2024-01-31 14:29:54,892] {logging_mixin.py:115} INFO - SUSPECT
+[2024-01-31 14:29:54,892] {logging_mixin.py:115} INFO - closecontact_dikarantina
+[2024-01-31 14:29:54,892] {logging_mixin.py:115} INFO - closecontact_discarded
+[2024-01-31 14:29:54,893] {logging_mixin.py:115} INFO - closecontact_meninggal
+[2024-01-31 14:29:54,893] {logging_mixin.py:115} INFO - confirmation_meninggal
+[2024-01-31 14:29:54,893] {logging_mixin.py:115} INFO - confirmation_sembuh
+[2024-01-31 14:29:54,893] {logging_mixin.py:115} INFO - kode_kab
+[2024-01-31 14:29:54,893] {logging_mixin.py:115} INFO - kode_prov
+[2024-01-31 14:29:54,893] {logging_mixin.py:115} INFO - nama_kab
+[2024-01-31 14:29:54,893] {logging_mixin.py:115} INFO - nama_prov
+[2024-01-31 14:29:54,894] {logging_mixin.py:115} INFO - probable_diisolasi
+[2024-01-31 14:29:54,894] {logging_mixin.py:115} INFO - probable_discarded
+[2024-01-31 14:29:54,894] {logging_mixin.py:115} INFO - probable_meninggal
+[2024-01-31 14:29:54,894] {logging_mixin.py:115} INFO - suspect_diisolasi
+[2024-01-31 14:29:54,894] {logging_mixin.py:115} INFO - suspect_discarded
+[2024-01-31 14:29:54,894] {logging_mixin.py:115} INFO - suspect_meninggal
+[2024-01-31 14:29:54,895] {logging_mixin.py:115} INFO - tanggal
+[2024-01-31 14:29:54,895] {python.py:173} INFO - Done. Returned value was: None
+[2024-01-31 14:29:54,904] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_postgresql, task_id=aggregate_dim_table, execution_date=20240131T142931, start_date=20240131T142948, end_date=20240131T142954
+[2024-01-31 14:29:54,945] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-01-31 14:29:54,961] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

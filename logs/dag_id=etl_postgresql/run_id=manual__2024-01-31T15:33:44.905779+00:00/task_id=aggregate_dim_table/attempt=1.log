@@ -1,0 +1,33 @@
+[2024-01-31 15:34:09,650] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T15:33:44.905779+00:00 [queued]>
+[2024-01-31 15:34:09,656] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T15:33:44.905779+00:00 [queued]>
+[2024-01-31 15:34:09,657] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 15:34:09,657] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-01-31 15:34:09,657] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-01-31 15:34:09,665] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): aggregate_dim_table> on 2024-01-31 15:33:44.905779+00:00
+[2024-01-31 15:34:09,668] {standard_task_runner.py:52} INFO - Started process 10382 to run task
+[2024-01-31 15:34:09,671] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'aggregate_dim_table', 'manual__2024-01-31T15:33:44.905779+00:00', '--job-id', '200', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmplb9hr0th', '--error-file', '/tmp/tmpsy2p4ad4']
+[2024-01-31 15:34:09,672] {standard_task_runner.py:80} INFO - Job 200: Subtask aggregate_dim_table
+[2024-01-31 15:34:09,708] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.aggregate_dim_table manual__2024-01-31T15:33:44.905779+00:00 [running]> on host d99f9e65d396
+[2024-01-31 15:34:09,754] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=aggregate_dim_table
+AIRFLOW_CTX_EXECUTION_DATE=2024-01-31T15:33:44.905779+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-01-31T15:33:44.905779+00:00
+[2024-01-31 15:34:12,582] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 15:34:15,530] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 15:34:18,357] {logging_mixin.py:115} INFO - Successfully install pymysql
+[2024-01-31 15:34:21,230] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-01-31 15:34:21,274] {logging_mixin.py:115} INFO - An error occurred: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "dim_province_pkey"
+DETAIL:  Key (province_id)=(32) already exists.
+
+[SQL: INSERT INTO dim_province (province_id, province_name) VALUES (%(province_id)s, %(province_name)s)]
+[parameters: {'province_id': '32', 'province_name': 'Jawa Barat'}]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+[2024-01-31 15:34:21,274] {python.py:173} INFO - Done. Returned value was: end
+[2024-01-31 15:34:21,293] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_postgresql, task_id=aggregate_dim_table, execution_date=20240131T153344, start_date=20240131T153409, end_date=20240131T153421
+[2024-01-31 15:34:21,322] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-01-31 15:34:21,341] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
