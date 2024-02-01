@@ -1,0 +1,26 @@
+[2024-02-01 11:46:31,558] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.create_ddl_postgres manual__2024-02-01T11:46:30.808361+00:00 [queued]>
+[2024-02-01 11:46:31,564] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.create_ddl_postgres manual__2024-02-01T11:46:30.808361+00:00 [queued]>
+[2024-02-01 11:46:31,564] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-01 11:46:31,564] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-02-01 11:46:31,564] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-01 11:46:31,573] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): create_ddl_postgres> on 2024-02-01 11:46:30.808361+00:00
+[2024-02-01 11:46:31,576] {standard_task_runner.py:52} INFO - Started process 569 to run task
+[2024-02-01 11:46:31,578] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'create_ddl_postgres', 'manual__2024-02-01T11:46:30.808361+00:00', '--job-id', '223', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmplsih6iz0', '--error-file', '/tmp/tmp1kzygvu5']
+[2024-02-01 11:46:31,579] {standard_task_runner.py:80} INFO - Job 223: Subtask create_ddl_postgres
+[2024-02-01 11:46:31,619] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.create_ddl_postgres manual__2024-02-01T11:46:30.808361+00:00 [running]> on host 0cb2a3b23a40
+[2024-02-01 11:46:31,676] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=create_ddl_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-01T11:46:30.808361+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-02-01T11:46:30.808361+00:00
+[2024-02-01 11:46:34,729] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-02-01 11:46:37,678] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-02-01 11:47:22,176] {local_task_job.py:221} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-02-01 11:47:22,178] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 569. PIDs of all processes in the group: [569]
+[2024-02-01 11:47:22,178] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 569
+[2024-02-01 11:47:52,709] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-02-01 11:47:52,779] {process_utils.py:75} INFO - Process psutil.Process(pid=569, status='terminated', exitcode=0, started='11:46:31') (569) terminated with exit code 0

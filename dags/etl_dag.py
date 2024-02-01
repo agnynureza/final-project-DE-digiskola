@@ -6,7 +6,7 @@ from airflow.operators.empty import EmptyOperator
 from airflow.operators.python import PythonOperator
 from airflow.models import Variable
 
-def __install_packages(package_list):
+def _install_packages(package_list):
     for package in package_list: 
         try:
             subprocess.check_call(['pip3', 'install', package])
@@ -17,11 +17,10 @@ def __install_packages(package_list):
             print(f'Something went wrong {e}')
             
 def _import_file_to_mysql(ti):
-    packages_to_install = ['json', 'pandas', 'pymysql']
-    __install_packages(packages_to_install)
+    packages_to_install = ['pandas']
+    _install_packages(packages_to_install)
 
     import pandas as pd
-    import pymysql
     
     try:
         dataset = ti.xcom_pull(key="dataset", task_ids="get_data_covid")        
@@ -42,7 +41,7 @@ def _import_file_to_mysql(ti):
     
 def _get_data_covid(ti):
     packages_to_install = ['requests']
-    __install_packages(packages_to_install)
+    _install_packages(packages_to_install)
     
     import requests
     
@@ -59,11 +58,11 @@ def _get_data_covid(ti):
     
 def _create_ddl_postgres():
     packages_to_install = ['sqlalchemy']
-    __install_packages(packages_to_install)
+    _install_packages(packages_to_install)
     
-    from sqlalchemy import create_engine, Column, Integer, String, Date, ForeignKey
+    from sqlalchemy import Column, Integer, String, Date, ForeignKey
     from sqlalchemy.ext.declarative import declarative_base
-    from sqlalchemy.orm import relationship, sessionmaker
+    from sqlalchemy.orm import sessionmaker
 
     Base = declarative_base()
 
@@ -112,7 +111,7 @@ def _create_ddl_postgres():
     class DistrictMonthly(Base):
         __tablename__ = 'district_monthly'
         id = Column(Integer, primary_key=True, autoincrement=True)
-        province_id = Column(Integer)
+        district_id = Column(Integer)
         case_id = Column(Integer)
         month = Column(String)
         total = Column(Integer)
@@ -120,7 +119,7 @@ def _create_ddl_postgres():
     class DistrictYearly(Base):
         __tablename__ = 'district_yearly'
         id = Column(Integer, primary_key=True, autoincrement=True)
-        province_id = Column(Integer)
+        district_id = Column(Integer)
         case_id = Column(Integer)
         year = Column(String)
         total = Column(Integer)
@@ -137,7 +136,7 @@ def _create_ddl_postgres():
  
 def _postgres_connection():
     packages_to_install = ['sqlalchemy']
-    __install_packages(packages_to_install)
+    _install_packages(packages_to_install)
     
     from sqlalchemy import create_engine
     
@@ -153,7 +152,7 @@ def _postgres_connection():
     
 def _mysql_connection():
     packages_to_install = ['sqlalchemy', 'pymysql']
-    __install_packages(packages_to_install)
+    _install_packages(packages_to_install)
     
     from sqlalchemy import create_engine
     
@@ -168,9 +167,9 @@ def _mysql_connection():
     engine = create_engine(connection_string)
     return engine
            
-def _aggregate_dim_table(ti):
+def _aggregate_dim_table():
     packages_to_install = ['sqlalchemy']
-    __install_packages(packages_to_install)
+    _install_packages(packages_to_install)
     
     from sqlalchemy import Column, Integer, String, select, inspect, distinct, text
     from sqlalchemy.orm import sessionmaker, declarative_base
@@ -266,10 +265,286 @@ def _aggregate_dim_table(ti):
         print(f"An error occurred: {str(e)}")
         return "end"
     
+def _aggregate_province_daily():
+    packages_to_install = ['sqlalchemy', 'pandas']
+    _install_packages(packages_to_install)
+    
+    import pandas as pd
+
+    mysql_engine = _mysql_connection()
+    postgres_engine = _postgres_connection()
+    
+    try:
+        # get all data from mysql staging
+        sql_query = 'SELECT * FROM staging_covid_dataset'
+        staging_df = pd.read_sql(sql_query, mysql_engine)
+        
+        # get dim case from postgres
+        sql_query = 'SELECT * FROM dim_case'
+        case_df = pd.read_sql(sql_query, postgres_engine)
+        
+        # prepare data
+        status_detail = case_df['status_detail'].tolist()
+        sum_value = 'sum'
+        aggregate_sum = {key: sum_value for key in status_detail}
+
+        agg_df = staging_df.groupby(['tanggal', 'kode_prov'])[status_detail] \
+                    .agg(aggregate_sum) \
+                    .reset_index()
+
+        # pivot table
+        melted_df = pd.melt(agg_df, id_vars=['tanggal', 'kode_prov'], var_name='Case', value_name='total')
+
+        extract_id = lambda row: case_df[case_df['status_detail'] == row['Case']]['id'].values[0]
+        melted_df['case_id'] = melted_df.apply(extract_id, axis=1)
+
+        melted_df = melted_df.drop('Case', axis=1)
+
+        melted_df.columns = ['date', 'province_id', 'total', 'case_id']
+
+        melted_df.index = range(1, len(melted_df) + 1)
+
+        # insert to postgres, province daily
+        table_name = 'province_daily'
+        melted_df.to_sql(table_name, postgres_engine, if_exists='replace', index=True, index_label='id')
+
+        # Commit and close the connection
+        postgres_engine.dispose()
+        mysql_engine.dispose()
+    
+        return "aggregate_province_daily"
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return "end"
+
+def _aggregate_province_monthly():
+    packages_to_install = ['sqlalchemy', 'pandas']
+    _install_packages(packages_to_install)
+    
+    import pandas as pd
+
+    mysql_engine = _mysql_connection()
+    postgres_engine = _postgres_connection()
+    
+    try:
+        # get all data from mysql staging
+        sql_query = 'SELECT * FROM staging_covid_dataset'
+        staging_df = pd.read_sql(sql_query, mysql_engine)
+        
+        # get dim case from postgres
+        sql_query = 'SELECT * FROM dim_case'
+        case_df = pd.read_sql(sql_query, postgres_engine)
+        
+        # prepare data
+        status_detail = case_df['status_detail'].tolist()
+        sum_value = 'sum'
+        aggregate_sum = {key: sum_value for key in status_detail}
+        
+        # add month information
+        staging_df['tanggal'] = pd.to_datetime(staging_df['tanggal'])
+        staging_df['month'] = staging_df['tanggal'].dt.strftime('%Y-%m')
+
+        agg_df = staging_df.groupby(['month', 'kode_prov'])[status_detail] \
+                    .agg(aggregate_sum) \
+                    .reset_index()
+
+        # pivot table
+        melted_df = pd.melt(agg_df, id_vars=['month', 'kode_prov'], var_name='Case', value_name='total')
+
+        extract_id = lambda row: case_df[case_df['status_detail'] == row['Case']]['id'].values[0]
+        melted_df['case_id'] = melted_df.apply(extract_id, axis=1)
+
+        melted_df = melted_df.drop('Case', axis=1)
+
+        melted_df.columns = ['month', 'province_id', 'total', 'case_id']
+
+        melted_df.index = range(1, len(melted_df) + 1)
+
+        # insert to postgres, province daily
+        table_name = 'province_monthly'
+        melted_df.to_sql(table_name, postgres_engine, if_exists='replace', index=True, index_label='id')
+
+        # Commit and close the connection
+        postgres_engine.dispose()
+        mysql_engine.dispose()
+    
+        return "aggregate_province_monthly"
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return "end"
+
+def _aggregate_province_yearly():
+    packages_to_install = ['sqlalchemy', 'pandas']
+    _install_packages(packages_to_install)
+    
+    import pandas as pd
+
+    mysql_engine = _mysql_connection()
+    postgres_engine = _postgres_connection()
+    
+    try:
+        # get all data from mysql staging
+        sql_query = 'SELECT * FROM staging_covid_dataset'
+        staging_df = pd.read_sql(sql_query, mysql_engine)
+        
+        # get dim case from postgres
+        sql_query = 'SELECT * FROM dim_case'
+        case_df = pd.read_sql(sql_query, postgres_engine)
+        
+        # prepare data
+        status_detail = case_df['status_detail'].tolist()
+        sum_value = 'sum'
+        aggregate_sum = {key: sum_value for key in status_detail}
+        
+        # add year information
+        staging_df['tanggal'] = pd.to_datetime(staging_df['tanggal'])
+        staging_df['year'] = staging_df['tanggal'].dt.strftime('%Y')
+
+        agg_df = staging_df.groupby(['year', 'kode_prov'])[status_detail] \
+                    .agg(aggregate_sum) \
+                    .reset_index()
+
+        # pivot table
+        melted_df = pd.melt(agg_df, id_vars=['year', 'kode_prov'], var_name='Case', value_name='total')
+
+        extract_id = lambda row: case_df[case_df['status_detail'] == row['Case']]['id'].values[0]
+        melted_df['case_id'] = melted_df.apply(extract_id, axis=1)
+
+        melted_df = melted_df.drop('Case', axis=1)
+
+        melted_df.columns = ['year', 'province_id', 'total', 'case_id']
+
+        melted_df.index = range(1, len(melted_df) + 1)
+
+        # insert to postgres, province daily
+        table_name = 'province_yearly'
+        melted_df.to_sql(table_name, postgres_engine, if_exists='replace', index=True, index_label='id')
+
+        # Commit and close the connection
+        postgres_engine.dispose()
+        mysql_engine.dispose()
+    
+        return "aggregate_province_yearly"
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return "end"
+
+def _aggregate_district_monthly():
+    packages_to_install = ['sqlalchemy', 'pandas']
+    _install_packages(packages_to_install)
+    
+    import pandas as pd
+
+    mysql_engine = _mysql_connection()
+    postgres_engine = _postgres_connection()
+    
+    try:
+        # get all data from mysql staging
+        sql_query = 'SELECT * FROM staging_covid_dataset'
+        staging_df = pd.read_sql(sql_query, mysql_engine)
+        
+        # get dim case from postgres
+        sql_query = 'SELECT * FROM dim_case'
+        case_df = pd.read_sql(sql_query, postgres_engine)
+        
+        # prepare data
+        status_detail = case_df['status_detail'].tolist()
+        sum_value = 'sum'
+        aggregate_sum = {key: sum_value for key in status_detail}
+        
+        # add year information
+        staging_df['tanggal'] = pd.to_datetime(staging_df['tanggal'])
+        staging_df['month'] = staging_df['tanggal'].dt.strftime('%Y-%m')
+
+        agg_df = staging_df.groupby(['month', 'kode_kab'])[status_detail] \
+                    .agg(aggregate_sum) \
+                    .reset_index()
+
+        # pivot table
+        melted_df = pd.melt(agg_df, id_vars=['month', 'kode_kab'], var_name='Case', value_name='total')
+
+        extract_id = lambda row: case_df[case_df['status_detail'] == row['Case']]['id'].values[0]
+        melted_df['case_id'] = melted_df.apply(extract_id, axis=1)
+
+        melted_df = melted_df.drop('Case', axis=1)
+
+        melted_df.columns = ['month', 'district_id', 'total', 'case_id']
+
+        melted_df.index = range(1, len(melted_df) + 1)
+
+        # insert to postgres, province daily
+        table_name = 'district_monthly'
+        melted_df.to_sql(table_name, postgres_engine, if_exists='replace', index=True, index_label='id')
+
+        # Commit and close the connection
+        postgres_engine.dispose()
+        mysql_engine.dispose()
+    
+        return "aggregate_district_monthly"
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return "end"
+
+def _aggregate_district_yearly():
+    packages_to_install = ['sqlalchemy', 'pandas']
+    _install_packages(packages_to_install)
+    
+    import pandas as pd
+
+    mysql_engine = _mysql_connection()
+    postgres_engine = _postgres_connection()
+    
+    try:
+        # get all data from mysql staging
+        sql_query = 'SELECT * FROM staging_covid_dataset'
+        staging_df = pd.read_sql(sql_query, mysql_engine)
+        
+        # get dim case from postgres
+        sql_query = 'SELECT * FROM dim_case'
+        case_df = pd.read_sql(sql_query, postgres_engine)
+        
+        # prepare data
+        status_detail = case_df['status_detail'].tolist()
+        sum_value = 'sum'
+        aggregate_sum = {key: sum_value for key in status_detail}
+        
+        # add year information
+        staging_df['tanggal'] = pd.to_datetime(staging_df['tanggal'])
+        staging_df['year'] = staging_df['tanggal'].dt.strftime('%Y')
+
+        agg_df = staging_df.groupby(['year', 'kode_kab'])[status_detail] \
+                    .agg(aggregate_sum) \
+                    .reset_index()
+
+        # pivot table
+        melted_df = pd.melt(agg_df, id_vars=['year', 'kode_kab'], var_name='Case', value_name='total')
+
+        extract_id = lambda row: case_df[case_df['status_detail'] == row['Case']]['id'].values[0]
+        melted_df['case_id'] = melted_df.apply(extract_id, axis=1)
+
+        melted_df = melted_df.drop('Case', axis=1)
+
+        melted_df.columns = ['year', 'district_id', 'total', 'case_id']
+
+        melted_df.index = range(1, len(melted_df) + 1)
+
+        # insert to postgres, province daily
+        table_name = 'district_yearly'
+        melted_df.to_sql(table_name, postgres_engine, if_exists='replace', index=True, index_label='id')
+
+        # Commit and close the connection
+        postgres_engine.dispose()
+        mysql_engine.dispose()
+    
+        return "aggregate_district_yearly"
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return "end"
+    
 with DAG(
     dag_id='etl_postgresql',
-    start_date=datetime(2023,9,8),
-    schedule_interval='00 23 * * *',
+    start_date=datetime(2024,1,1),
+    schedule_interval='0 0 * * *',
     catchup=False,
     default_args={
         'retries': 1,
@@ -304,24 +579,34 @@ with DAG(
         execution_timeout=timedelta(minutes=5)
     )
     
-    aggregate_province_daily=EmptyOperator(
-        task_id='aggregate_province_daily'
+    aggregate_province_daily=PythonOperator(
+        task_id='aggregate_province_daily',
+        python_callable=_aggregate_province_daily,
+        execution_timeout=timedelta(minutes=5)
     )
     
-    aggregate_province_monthly=EmptyOperator(
-        task_id='aggregate_province_monthly'
+    aggregate_province_monthly=PythonOperator(
+        task_id='aggregate_province_monthly',
+        python_callable=_aggregate_province_monthly,
+        execution_timeout=timedelta(minutes=5)
     )
     
-    aggregate_province_yearly=EmptyOperator(
-        task_id='aggregate_province_yearly'
+    aggregate_province_yearly=PythonOperator(
+        task_id='aggregate_province_yearly',
+        python_callable=_aggregate_province_yearly,
+        execution_timeout=timedelta(minutes=5)
     )
     
-    aggregate_district_monthly=EmptyOperator(
-        task_id='aggregate_district_monthly'
+    aggregate_district_monthly=PythonOperator(
+        task_id='aggregate_district_monthly',
+        python_callable=_aggregate_district_monthly,
+        execution_timeout=timedelta(minutes=5)
     )
     
-    aggregate_district_yearly=EmptyOperator(
-        task_id='aggregate_district_yearly'
+    aggregate_district_yearly=PythonOperator(
+        task_id='aggregate_district_yearly',
+        python_callable=_aggregate_district_yearly,
+        execution_timeout=timedelta(minutes=5)
     )
     
     end_task=EmptyOperator(
@@ -329,5 +614,9 @@ with DAG(
     )
     
     start_task >> get_data_covid >> import_file_to_mysql >> create_ddl_postgres >> aggregate_dim_table
-    aggregate_dim_table >> aggregate_district_monthly >> aggregate_district_yearly >> end_task
-    aggregate_dim_table >> aggregate_province_daily >> aggregate_province_monthly >> aggregate_province_yearly >> end_task
+    aggregate_dim_table >> aggregate_district_monthly >> end_task
+    aggregate_dim_table >> aggregate_district_yearly >> end_task
+    aggregate_dim_table >> aggregate_province_daily >> end_task
+    aggregate_dim_table >> aggregate_province_monthly >> end_task
+    aggregate_dim_table >> aggregate_province_yearly >> end_task
+    

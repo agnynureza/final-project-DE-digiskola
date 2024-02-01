@@ -72,11 +72,10 @@ password = os.environ['POSTGRES_PASSWORD']
 port = os.environ['POSTGRES_PORT']
 db = os.environ['POSTGRES_DB']
 
-# Database connection setup
 engine = create_engine(f'postgresql://{username}:{password}@localhost:{port}/{db}')
 Base.metadata.create_all(engine)
 
-# Create a session to interact with the database
+
 Session = sessionmaker(bind=engine)
 session = Session()
 session.commit()

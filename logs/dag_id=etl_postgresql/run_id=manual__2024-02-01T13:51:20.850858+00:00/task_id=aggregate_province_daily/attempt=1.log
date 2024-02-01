@@ -1,0 +1,28 @@
+[2024-02-01 13:51:21,458] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_province_daily manual__2024-02-01T13:51:20.850858+00:00 [queued]>
+[2024-02-01 13:51:21,465] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.aggregate_province_daily manual__2024-02-01T13:51:20.850858+00:00 [queued]>
+[2024-02-01 13:51:21,466] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-01 13:51:21,466] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-02-01 13:51:21,466] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-01 13:51:21,482] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): aggregate_province_daily> on 2024-02-01 13:51:20.850858+00:00
+[2024-02-01 13:51:21,488] {standard_task_runner.py:52} INFO - Started process 4379 to run task
+[2024-02-01 13:51:21,492] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'aggregate_province_daily', 'manual__2024-02-01T13:51:20.850858+00:00', '--job-id', '279', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpv74gse3o', '--error-file', '/tmp/tmpm5e4u6g8']
+[2024-02-01 13:51:21,495] {standard_task_runner.py:80} INFO - Job 279: Subtask aggregate_province_daily
+[2024-02-01 13:51:21,559] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.aggregate_province_daily manual__2024-02-01T13:51:20.850858+00:00 [running]> on host 0cb2a3b23a40
+[2024-02-01 13:51:21,651] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=aggregate_province_daily
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-01T13:51:20.850858+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-02-01T13:51:20.850858+00:00
+[2024-02-01 13:51:25,203] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-02-01 13:51:28,183] {logging_mixin.py:115} INFO - Successfully install pandas
+[2024-02-01 13:51:31,445] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-02-01 13:51:34,449] {logging_mixin.py:115} INFO - Successfully install pymysql
+[2024-02-01 13:51:37,431] {logging_mixin.py:115} INFO - Successfully install sqlalchemy
+[2024-02-01 13:51:37,525] {python.py:173} INFO - Done. Returned value was: aggregate_province_daily
+[2024-02-01 13:51:37,545] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_postgresql, task_id=aggregate_province_daily, execution_date=20240201T135120, start_date=20240201T135121, end_date=20240201T135137
+[2024-02-01 13:51:37,595] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-02-01 13:51:37,616] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
