@@ -13,7 +13,6 @@ services:
       - .env
     volumes:
       - postgres_airflow:/var/lib/postgresql/data
-
   mysql:
     image: mysql
     env_file:
@@ -22,8 +21,6 @@ services:
       - '3310:3306'
     volumes:
       - mysql:/var/lib/mysql
-
-
   scheduler:
     image: apache/airflow:2.3.0
     user: "${AIRFLOW_UID}:0"
@@ -44,7 +41,6 @@ services:
     restart: on-failure
     ports:
       - "8793:8793"
-
   webserver:
     image: apache/airflow:2.3.0
     user: "${AIRFLOW_UID}:0"

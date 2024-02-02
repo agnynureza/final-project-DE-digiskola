@@ -1,0 +1,24 @@
+[2024-02-02 09:19:59,503] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: final_project_dag.get_data_covid scheduled__2024-02-01T00:00:00+00:00 [queued]>
+[2024-02-02 09:19:59,509] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: final_project_dag.get_data_covid scheduled__2024-02-01T00:00:00+00:00 [queued]>
+[2024-02-02 09:19:59,510] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-02 09:19:59,510] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-02-02 09:19:59,510] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-02 09:19:59,520] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_data_covid> on 2024-02-01 00:00:00+00:00
+[2024-02-02 09:19:59,524] {standard_task_runner.py:52} INFO - Started process 7902 to run task
+[2024-02-02 09:19:59,527] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'final_project_dag', 'get_data_covid', 'scheduled__2024-02-01T00:00:00+00:00', '--job-id', '355', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpidqfe60p', '--error-file', '/tmp/tmp9sggmvkm']
+[2024-02-02 09:19:59,528] {standard_task_runner.py:80} INFO - Job 355: Subtask get_data_covid
+[2024-02-02 09:19:59,566] {task_command.py:369} INFO - Running <TaskInstance: final_project_dag.get_data_covid scheduled__2024-02-01T00:00:00+00:00 [running]> on host c3bb523480bf
+[2024-02-02 09:19:59,619] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=final_project_dag
+AIRFLOW_CTX_TASK_ID=get_data_covid
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-02-01T00:00:00+00:00
+[2024-02-02 09:20:02,809] {logging_mixin.py:115} INFO - Successfully install requests
+[2024-02-02 09:20:02,887] {python.py:173} INFO - Done. Returned value was: get_data_covid
+[2024-02-02 09:20:02,904] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=final_project_dag, task_id=get_data_covid, execution_date=20240201T000000, start_date=20240202T091959, end_date=20240202T092002
+[2024-02-02 09:20:02,939] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-02-02 09:20:02,966] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -85,7 +85,7 @@ def _create_ddl_postgres():
 
     # Fact Tables
     class ProvinceDaily(Base):
-        __tablename__ = 'province_daily'
+        __tablename__ = 'fact_province_daily'
         id = Column(Integer, primary_key=True, autoincrement=True)
         province_id = Column(Integer)
         case_id = Column(Integer)
@@ -93,7 +93,7 @@ def _create_ddl_postgres():
         total = Column(Integer)
 
     class ProvinceMonthly(Base):
-        __tablename__ = 'province_monthly'
+        __tablename__ = 'fact_province_monthly'
         id = Column(Integer, primary_key=True, autoincrement=True)
         province_id = Column(Integer)
         case_id = Column(Integer)
@@ -101,7 +101,7 @@ def _create_ddl_postgres():
         total = Column(Integer)
         
     class ProvinceYearly(Base):
-        __tablename__ = 'province_yearly'
+        __tablename__ = 'fact_province_yearly'
         id = Column(Integer, primary_key=True, autoincrement=True)
         province_id = Column(Integer)
         case_id = Column(Integer)
@@ -109,7 +109,7 @@ def _create_ddl_postgres():
         total = Column(Integer)
         
     class DistrictMonthly(Base):
-        __tablename__ = 'district_monthly'
+        __tablename__ = 'fact_district_monthly'
         id = Column(Integer, primary_key=True, autoincrement=True)
         district_id = Column(Integer)
         case_id = Column(Integer)
@@ -117,7 +117,7 @@ def _create_ddl_postgres():
         total = Column(Integer)
         
     class DistrictYearly(Base):
-        __tablename__ = 'district_yearly'
+        __tablename__ = 'fact_district_yearly'
         id = Column(Integer, primary_key=True, autoincrement=True)
         district_id = Column(Integer)
         case_id = Column(Integer)
@@ -267,7 +267,7 @@ def _aggregate_dim_table():
     
 def _aggregate_province_daily():
     try:
-        _base_aggregate(time="tanggal", scope="kode_prov", table_name="province_daily")
+        _base_aggregate(time="tanggal", scope="kode_prov", table_name="fact_province_daily")
         return "aggregate_province_daily"
     except Exception as e:
         print(f"An error occurred: {str(e)}")
@@ -275,7 +275,7 @@ def _aggregate_province_daily():
 
 def _aggregate_province_monthly():
     try:
-        _base_aggregate(time="month", scope="kode_prov", table_name="province_monthly")
+        _base_aggregate(time="month", scope="kode_prov", table_name="fact_province_monthly")
         return "aggregate_province_monthly"
     except Exception as e:
         print(f"An error occurred: {str(e)}")
@@ -283,7 +283,7 @@ def _aggregate_province_monthly():
 
 def _aggregate_province_yearly():
     try:
-        _base_aggregate(time="year", scope="kode_prov", table_name="province_yearly")
+        _base_aggregate(time="year", scope="kode_prov", table_name="fact_province_yearly")
         return "aggregate_province_yearly"
     except Exception as e:
         print(f"An error occurred: {str(e)}")
@@ -291,7 +291,7 @@ def _aggregate_province_yearly():
 
 def _aggregate_district_monthly():
     try:
-        _base_aggregate(time="month", scope="kode_kab", table_name="district_monthly")
+        _base_aggregate(time="month", scope="kode_kab", table_name="fact_district_monthly")
         return "aggregate_district_monthly"
     except Exception as e:
         print(f"An error occurred: {str(e)}")
@@ -299,13 +299,13 @@ def _aggregate_district_monthly():
 
 def _aggregate_district_yearly():
     try:
-        _base_aggregate(time="year", scope="kode_kab", table_name="district_yearly")
+        _base_aggregate(time="year", scope="kode_kab", table_name="fact_district_yearly")
         return "aggregate_district_yearly"
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return "end"
 
-def _base_aggregate(time="tanggal", scope="kode_prov", table_name="province_daily"):
+def _base_aggregate(time="tanggal", scope="kode_prov", table_name="fact_province_daily"):
     packages_to_install = ['pandas']
     _install_packages(packages_to_install)
     
@@ -328,11 +328,11 @@ def _base_aggregate(time="tanggal", scope="kode_prov", table_name="province_dail
         sum_value = 'sum'
         aggregate_sum = {key: sum_value for key in status_detail}
         
-        staging_df['tanggal'] = pd.to_datetime(staging_df['tanggal'])
+        staging_df['tanggal_parse'] = pd.to_datetime(staging_df['tanggal'])
         if time == "year":
-            staging_df['year'] = staging_df['tanggal'].dt.strftime('%Y')
+            staging_df['year'] = staging_df['tanggal_parse'].dt.strftime('%Y')
         elif time == "month":
-            staging_df['month'] = staging_df['tanggal'].dt.strftime('%Y-%m')
+            staging_df['month'] = staging_df['tanggal_parse'].dt.strftime('%Y-%m')
             
         # aggregate    
         agg_df = staging_df.groupby([time, scope])[status_detail] \
