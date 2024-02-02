@@ -3853,3 +3853,10 @@ SyntaxError: invalid syntax
 [2024-02-01 14:18:29,457] {logging_mixin.py:115} INFO - [2024-02-01 14:18:29,457] {dag.py:2371} INFO - Sync 1 DAGs
 [2024-02-01 14:18:29,474] {logging_mixin.py:115} INFO - [2024-02-01 14:18:29,474] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-02-01T00:05:00+00:00, run_after=2024-02-02T00:00:00+00:00
 [2024-02-01 14:18:29,483] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.079 seconds
+[2024-02-01 14:18:59,714] {processor.py:153} INFO - Started process (PID=5445) to work on /opt/airflow/dags/etl_dag.py
+[2024-02-01 14:18:59,715] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2024-02-01 14:18:59,716] {logging_mixin.py:115} INFO - [2024-02-01 14:18:59,715] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2024-02-01 14:18:59,733] {processor.py:651} INFO - DAG(s) dict_keys(['etl_postgresql']) retrieved from /opt/airflow/dags/etl_dag.py
+[2024-02-01 14:18:59,763] {logging_mixin.py:115} INFO - [2024-02-01 14:18:59,763] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-02-01 14:18:59,837] {logging_mixin.py:115} INFO - [2024-02-01 14:18:59,837] {dag.py:2919} INFO - Setting next_dagrun for etl_postgresql to 2024-02-01T00:05:00+00:00, run_after=2024-02-02T00:00:00+00:00
+[2024-02-01 14:18:59,846] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.138 seconds

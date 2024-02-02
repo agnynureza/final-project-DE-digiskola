@@ -2259,3 +2259,10 @@
 [2024-02-01 14:18:30,537] {logging_mixin.py:115} INFO - [2024-02-01 14:18:30,537] {dag.py:2371} INFO - Sync 1 DAGs
 [2024-02-01 14:18:30,552] {logging_mixin.py:115} INFO - [2024-02-01 14:18:30,552] {dag.py:2919} INFO - Setting next_dagrun for first_sample_dag to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
 [2024-02-01 14:18:30,561] {processor.py:161} INFO - Processing /opt/airflow/dags/sample_dag.py took 0.057 seconds
+[2024-02-01 14:19:00,743] {processor.py:153} INFO - Started process (PID=5450) to work on /opt/airflow/dags/sample_dag.py
+[2024-02-01 14:19:00,744] {processor.py:641} INFO - Processing file /opt/airflow/dags/sample_dag.py for tasks to queue
+[2024-02-01 14:19:00,745] {logging_mixin.py:115} INFO - [2024-02-01 14:19:00,745] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/sample_dag.py
+[2024-02-01 14:19:00,757] {processor.py:651} INFO - DAG(s) dict_keys(['first_sample_dag']) retrieved from /opt/airflow/dags/sample_dag.py
+[2024-02-01 14:19:00,790] {logging_mixin.py:115} INFO - [2024-02-01 14:19:00,789] {dag.py:2371} INFO - Sync 1 DAGs
+[2024-02-01 14:19:00,805] {logging_mixin.py:115} INFO - [2024-02-01 14:19:00,805] {dag.py:2919} INFO - Setting next_dagrun for first_sample_dag to 2024-01-30T23:00:00+00:00, run_after=2024-01-31T23:00:00+00:00
+[2024-02-01 14:19:00,811] {processor.py:161} INFO - Processing /opt/airflow/dags/sample_dag.py took 0.073 seconds

@@ -1,0 +1,24 @@
+[2024-02-02 04:24:13,266] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.get_data_covid manual__2024-02-02T04:24:11.255303+00:00 [queued]>
+[2024-02-02 04:24:13,272] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: etl_postgresql.get_data_covid manual__2024-02-02T04:24:11.255303+00:00 [queued]>
+[2024-02-02 04:24:13,272] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-02 04:24:13,272] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-02-02 04:24:13,272] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-02 04:24:13,280] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): get_data_covid> on 2024-02-02 04:24:11.255303+00:00
+[2024-02-02 04:24:13,284] {standard_task_runner.py:52} INFO - Started process 1669 to run task
+[2024-02-02 04:24:13,286] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'etl_postgresql', 'get_data_covid', 'manual__2024-02-02T04:24:11.255303+00:00', '--job-id', '337', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpg6v_1f2r', '--error-file', '/tmp/tmpj389bfbm']
+[2024-02-02 04:24:13,287] {standard_task_runner.py:80} INFO - Job 337: Subtask get_data_covid
+[2024-02-02 04:24:13,324] {task_command.py:369} INFO - Running <TaskInstance: etl_postgresql.get_data_covid manual__2024-02-02T04:24:11.255303+00:00 [running]> on host c3bb523480bf
+[2024-02-02 04:24:13,370] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl_postgresql
+AIRFLOW_CTX_TASK_ID=get_data_covid
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-02T04:24:11.255303+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-02-02T04:24:11.255303+00:00
+[2024-02-02 04:24:15,859] {logging_mixin.py:115} INFO - Successfully install requests
+[2024-02-02 04:24:15,934] {python.py:173} INFO - Done. Returned value was: get_data_covid
+[2024-02-02 04:24:15,947] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=etl_postgresql, task_id=get_data_covid, execution_date=20240202T042411, start_date=20240202T042413, end_date=20240202T042415
+[2024-02-02 04:24:15,986] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-02-02 04:24:16,014] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
